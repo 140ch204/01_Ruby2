@@ -2,15 +2,21 @@ emailarray = []
 
 for n in (1..50)
     
-    email = "jean.dupont#{n}@email.fr"
+    if n < 10
+        email = "jean.dupont.0#{n}@email.fr"
+      else
+        email = "jean.dupont.#{n}@email.fr"
+    end
 
-    emailarray = emailarray + [email]
+    
 
     if n%2 === 0
-       then print emailarray 
+        emailarray = emailarray + [email] 
 	end
 
  end
 
+
+ puts emailarray
  
  
